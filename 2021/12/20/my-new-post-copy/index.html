@@ -434,8 +434,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E5%88%86%E7%B1%BB-%E6%B5%8B%E8%AF%95/">
-                                <span class="chip bg-color">分类, 测试</span>
+                            <a href="/tags/%E5%88%86%E7%B1%BB/">
+                                <span class="chip bg-color">分类</span>
+                            </a>
+                        
+                            <a href="/tags/%E6%B5%8B%E8%AF%95/">
+                                <span class="chip bg-color">测试</span>
                             </a>
                         
                     </div>
@@ -713,8 +717,12 @@ https://yeasy.gitbook.io/docker_practice/install/mac
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E5%88%86%E7%B1%BB-%E6%B5%8B%E8%AF%95/">
-                                    <span class="chip bg-color">分类, 测试</span>
+                                <a href="/tags/%E5%88%86%E7%B1%BB/">
+                                    <span class="chip bg-color">分类</span>
+                                </a>
+                            
+                                <a href="/tags/%E6%B5%8B%E8%AF%95/">
+                                    <span class="chip bg-color">测试</span>
                                 </a>
                             
                         </div>
@@ -1350,6 +1358,14 @@ $(function () {
     
 
     <!-- 鼠标星星特效 -->
+     
+        <script type="text/javascript">
+            // 只在桌面版网页启用特效
+            var windowWidth = $(window).width();
+            if (windowWidth > 768) {
+                document.write('<script type="text/javascript" src="/libs/others/star.js"><\/script>');
+            }
+        </script>
     
 
      
@@ -1393,6 +1409,8 @@ $(function () {
 
     
 
+    
+    <script type="text/javascript" src="/libs/background/ribbon-dynamic.js" async="async"></script>
     
 
     
