@@ -4,8 +4,11 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Hello World, codePigPig">
-    <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hex">
+    <meta name="keywords" content="My New Post, codePigPig">
+    <meta name="description" content="Docker概述：Docker为什么出现？一款产品：开发 – 上线，需要两套环境，应用环境，应用配置！
+问题：
+
+开发 – 运维的问题：开发的电脑上能运行，版本更新，导致服务不可用，运维需要经常进行环境配置，每个机器都要部署环境（集群red">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +20,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Hello World | codePigPig</title>
+    <title>My New Post | codePigPig</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
@@ -310,12 +313,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/20.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Hello World</h1>
+                    <h1 class="description center-align post-title">My New Post</h1>
                 </div>
             </div>
         </div>
@@ -457,14 +460,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    73
+                    1.5k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    5 分
                 </div>
                 
 
@@ -484,19 +487,155 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre class=" language-bash"><code class="language-bash">$ hexo new <span class="token string">"My New Post"</span>
+                <h2 id="Docker概述："><a href="#Docker概述：" class="headerlink" title="Docker概述："></a>Docker概述：</h2><h3 id="Docker为什么出现？"><a href="#Docker为什么出现？" class="headerlink" title="Docker为什么出现？"></a>Docker为什么出现？</h3><p>一款产品：开发 – 上线，需要两套环境，应用环境，应用配置！</p>
+<p>问题：</p>
+<ul>
+<li>开发 – 运维的问题：开发的电脑上能运行，版本更新，导致服务不可用，运维需要经常进行环境配置，每个机器都要部署环境（集群redis、mysql）等。费时费力。</li>
+<li>发布一个项目（jar+（Redis+mysql+jdk+es等）），项目不能都带上环境安装打包。</li>
+<li>服务器每一个应用的环境Redis+mysql+jdk+Es+Hadoop都需要配置，太麻烦，不能跨平台。</li>
+<li>传统开发：开发项目打包jar，运维做环境部署等。</li>
+<li>现在开发：开发打包部署上线，一套流程做完。</li>
+</ul>
+<p>docker的解决方法：</p>
+<ul>
+<li>java – apk – 发布（应用商店） — 张三使用apk — 安装即可用</li>
+<li>java – jar（环境） –  打包项目带上环境（镜像） – （docker仓库：商店）— 下载我们发布的镜像 — 直接运行即可。</li>
+</ul>
+<p>docker的主要思想：</p>
+<ul>
+<li>JRE – 多个应用（端口冲突）原来都是交叉的。</li>
+<li>隔离：Docker核心思想，打包装箱，每个箱子都是互相隔离的。</li>
+<li>Doker通过隔离机制，可以将服务器利用到极致。</li>
+</ul>
+<h3 id="Docker的历史"><a href="#Docker的历史" class="headerlink" title="Docker的历史"></a>Docker的历史</h3><p>概述：</p>
+<ul>
+<li>2010年，年轻人-美国-公司（dotclound），主要做pass的云计算服务，LXC有关的容器技术，他们将自己的技术（容器技术）命名为<strong>Docker</strong>。</li>
+<li>Docker刚刚诞生的时候，没有引起行业的注意，活不下去。</li>
+</ul>
+<p>开源：</p>
+<ul>
+<li>2013年，Docker开源</li>
+<li>Docker越来越多的人发现了Docker的优点，火了，至此每个月都会更新一个版本。</li>
+<li>2014年4月9日，Docker1.0发布。</li>
+</ul>
+<p>Docker为什么火：</p>
+<p>在容器技术出来之前，我们使用的都是虚拟机技术。</p>
+<p>虚拟机：</p>
+<ul>
+<li>在window中装一个Vmware，通过这个软件我们可以虚拟出来一台活着多台电脑，非常笨重。</li>
+<li>虚拟机也是属于虚拟化技术，Docker容器技术，也是一种虚拟化技术。</li>
+</ul>
+<pre><code>vm：linux centos原生镜像（一个电脑），隔离，需要开启多个虚拟机。开启服务很慢。
+docker: 隔离，镜像（最核心的环境 4m+jdk+mysql等）十分的小巧，运行镜像就行了，开启服务非常快。
 </code></pre>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre class=" language-bash"><code class="language-bash">$ hexo server
+<h3 id="Docker地址"><a href="#Docker地址" class="headerlink" title="Docker地址"></a>Docker地址</h3><p>官网：</p>
+<pre><code>https://www.docker.com/
 </code></pre>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre class=" language-bash"><code class="language-bash">$ hexo generate
+<p>文档地址：</p>
+<pre><code>https://docs.docker.com/
 </code></pre>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre class=" language-bash"><code class="language-bash">$ hexo deploy
+<p>仓库地址：</p>
+<pre><code>https://hub.docker.com/
 </code></pre>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+<h3 id="Docker能干吗"><a href="#Docker能干吗" class="headerlink" title="Docker能干吗"></a>Docker能干吗</h3><blockquote>
+<p>以前的虚拟机</p>
+</blockquote>
+<p>图解：</p>
+<p>![image-20211216155509294](/Users/codepigpig/Library/Application Support/typora-user-images/image-20211216155509294.png)</p>
+<p>虚拟机技术缺点：</p>
+<ul>
+<li>资源占用非常多</li>
+<li>冗余步骤多</li>
+<li>启动很慢</li>
+</ul>
+<blockquote>
+<p>Docker容器化技术</p>
+</blockquote>
+<p>图解：</p>
+<p>![image-20211216155653431](/Users/codepigpig/Library/Application Support/typora-user-images/image-20211216155653431.png)</p>
+<p>比较Docker和虚拟机技术的不同：</p>
+<ul>
+<li>传统虚拟机，虚拟出一个硬件，运行一个完整的操作系统，然后在这个系统上安装和运行软件。</li>
+<li>容器内的应用直接运行在宿主机的容器中，容器是没有自己的内核的，也没有虚拟我们的硬件，所以轻便了。</li>
+<li>每个容器是互相隔离的，每个容器内都有一个属于自己的文件系统，互不影响。</li>
+</ul>
+<blockquote>
+<p>DevOps（开发、运维）</p>
+</blockquote>
+<p><strong>应用更快的交互和部署</strong></p>
+<ul>
+<li>传统：一堆帮助文档，安装程序</li>
+<li>Docker：打包镜像发布测试，一件运行</li>
+</ul>
+<p><strong>更便捷的升级和扩缩容</strong></p>
+<ul>
+<li>使用Docker之后，我们部署应用和搭积木一样！</li>
+<li>项目打包为一个镜像，扩展 服务器A、服务器B只需要同样的镜像。</li>
+</ul>
+<p><strong>更简单的系统运维</strong></p>
+<p>在容器化之后，我们的开发，测试环境都是高度一致的</p>
+<p><strong>更高效的计算资源利用</strong></p>
+<p>Docker是内核级别的虚拟化，可以在一个物理机上运行更多的容器实例，服务器的性能可以被压榨到极致。</p>
+<h2 id="Docker安装"><a href="#Docker安装" class="headerlink" title="Docker安装"></a>Docker安装</h2><h3 id="Docker的基本组成"><a href="#Docker的基本组成" class="headerlink" title="Docker的基本组成"></a>Docker的基本组成</h3><p>图解：</p>
+<p>![image-20211216162432394](/Users/codepigpig/Library/Application Support/typora-user-images/image-20211216162432394.png)</p>
+<p><strong>镜像（image）：</strong></p>
+<ul>
+<li>Docker镜像就好比一个模版，可以通过这个模版来创建容器服务，tomcat镜像===》run==〉tomcat01容器（提供服务器），通过这个镜像可以创建多个容器（最终服务运行活着项目运行就是在容器中）。</li>
+</ul>
+<p><strong>容器（container）：</strong></p>
+<ul>
+<li><p>Docker利用容器技术，独立运行一个或者一个组应用，通过镜像来创建的。</p>
+</li>
+<li><p>启动、停止、删除和基础命令</p>
+</li>
+<li><p>目前就可以吧这个容器理解为就是一个简易版的Linux系统。</p>
+</li>
+</ul>
+<p><strong>仓库（respository）：</strong></p>
+<ul>
+<li>仓库就是存放镜像的地方</li>
+<li>仓库分为公有仓库和私有仓库</li>
+<li>Docker Hub（默认是国外的镜像）</li>
+<li>阿里云等都有容器服务器（需要配置镜像加速！ ）</li>
+</ul>
+<h3 id="CentOS"><a href="#CentOS" class="headerlink" title="CentOS"></a>CentOS</h3><p>安装学习链接：</p>
+<pre><code># 1. 官方文档
+https://docs.docker.com/engine/install/centos/
+
+# 2. 中文文档
+https://yeasy.gitbook.io/docker_practice/install/centos
+</code></pre>
+<p>MacOS</p>
+<p>安装学习链接：</p>
+<pre><code># 1. 官方文档
+https://docs.docker.com/desktop/mac/install/
+
+# 2. 中文文档
+https://yeasy.gitbook.io/docker_practice/install/mac
+</code></pre>
+<h3 id="Run的流程"><a href="#Run的流程" class="headerlink" title="Run的流程"></a>Run的流程</h3><p>图解：</p>
+<p>![image-20211216202718036](/Users/codepigpig/Library/Application Support/typora-user-images/image-20211216202718036.png)</p>
+<h3 id="Docker的原理："><a href="#Docker的原理：" class="headerlink" title="Docker的原理："></a>Docker的原理：</h3><ul>
+<li><p>Docker是一个Client-Server结构的系统，Docker的守护进程运行在主机上。通过Socket从客户端访问。</p>
+</li>
+<li><p>DockerServer接收到Docker-Client的指令，就会执行这个命令</p>
+</li>
+</ul>
+<p>图解：</p>
+<p>![image-20211216203126469](/Users/codepigpig/Library/Application Support/typora-user-images/image-20211216203126469.png)</p>
+<h3 id="Docker为什么比VM快？"><a href="#Docker为什么比VM快？" class="headerlink" title="Docker为什么比VM快？"></a>Docker为什么比VM快？</h3><ul>
+<li>Docker有着比虚拟机更少的抽象层</li>
+<li>Docker利用的是宿主机的内核，VM需要是Guest OS，在宿主机上再创建新的系统，浪费资源。</li>
+</ul>
+<p>图解：</p>
+<p>![image-20211216203753366](/Users/codepigpig/Library/Application Support/typora-user-images/image-20211216203753366.png)</p>
+<p>总结：</p>
+<ul>
+<li>所以说，新建一个容器的时候，Docker不需要向虚拟机一样重新加载一个操作系统内核，避免引导。</li>
+<li>虚拟机是加载Guest OS，分钟级别的，有复杂的过程。</li>
+<li>Docker直接利用宿主机，秒级，很快。</li>
+</ul>
+<p>![image-20211218110145373](/Users/codepigpig/Library/Application Support/typora-user-images/image-20211218110145373.png)</p>
 
                 
             </div>
@@ -523,7 +662,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://codepigpig.github.io/2021/12/20/hello-world/">https://codepigpig.github.io/2021/12/20/hello-world/</a>
+                    <a href="https://codepigpig.github.io/2021/12/20/my-new-post/">https://codepigpig.github.io/2021/12/20/my-new-post/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -730,66 +869,18 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2021/12/20/my-new-post-copy/">
+                <a href="/2021/12/20/my-new-post/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="分类标签测试">
+                        <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="My New Post">
                         
-                        <span class="card-title">分类标签测试</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            
-                        
-                    </div>
-                    <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-12-20
-                        </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/%E6%A0%87%E7%AD%BE/" class="post-category">
-                                    标签
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/%E5%88%86%E7%B1%BB-%E6%B5%8B%E8%AF%95/">
-                        <span class="chip bg-color">分类, 测试</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="far fa-dot-circle"></i>
-            </div>
-            <div class="card">
-                <a href="/2021/12/20/hello-world/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Hello World">
-                        
-                        <span class="card-title">Hello World</span>
+                        <span class="card-title">My New Post</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -811,6 +902,55 @@
                     </div>
                 </div>
 
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2021/12/20/my-new-post-copy/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="分类标签测试">
+                        
+                        <span class="card-title">分类标签测试</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-12-20
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E6%A0%87%E7%AD%BE/" class="post-category">
+                                    标签
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E5%88%86%E7%B1%BB-%E6%B5%8B%E8%AF%95/">
+                        <span class="chip bg-color">分类, 测试</span>
+                    </a>
+                    
+                </div>
                 
             </div>
         </div>
