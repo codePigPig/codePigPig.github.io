@@ -6,7 +6,7 @@
   <link href="https://codepigpig.github.io/atom.xml" rel="self"/>
   
   <link href="https://codepigpig.github.io/"/>
-  <updated>2021-12-21T07:17:30.153Z</updated>
+  <updated>2021-12-21T01:23:02.205Z</updated>
   <id>https://codepigpig.github.io/</id>
   
   <author>
@@ -15,33 +15,6 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>首页轮播</title>
-    <link href="https://codepigpig.github.io/2021/12/21/shou-ye-lun-bo/"/>
-    <id>https://codepigpig.github.io/2021/12/21/shou-ye-lun-bo/</id>
-    <published>2021-12-21T07:13:01.000Z</published>
-    <updated>2021-12-21T07:17:30.153Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;特性&quot;&gt;&lt;a href=&quot;#特性&quot; class=&quot;headerlink&quot; title=&quot;特性&quot;&gt;&lt;/a&gt;特性&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;简单漂亮，文章内容美观易读&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://material.io/&quot;&gt;Material</summary>
-        
-      
-    
-    
-    
-    <category term="轮播分类测试1" scheme="https://codepigpig.github.io/categories/%E8%BD%AE%E6%92%AD%E5%88%86%E7%B1%BB%E6%B5%8B%E8%AF%951/"/>
-    
-    <category term="轮播分类测试2" scheme="https://codepigpig.github.io/categories/%E8%BD%AE%E6%92%AD%E5%88%86%E7%B1%BB%E6%B5%8B%E8%AF%951/%E8%BD%AE%E6%92%AD%E5%88%86%E7%B1%BB%E6%B5%8B%E8%AF%952/"/>
-    
-    
-  </entry>
   
   <entry>
     <title>test2</title>
