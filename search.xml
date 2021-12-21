@@ -24,6 +24,18 @@
         <content type="html"><![CDATA[]]></content>
       
       
+      <categories>
+          
+          <category> 分类测试 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 标签测试 </tag>
+            
+        </tags>
       
     </entry>
     
