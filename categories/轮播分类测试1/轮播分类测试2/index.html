@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="分类, codePigPig">
+    <meta name="keywords" content="分类: 轮播分类测试2, codePigPig">
     <meta name="description" content="代码猪猪的个人博客">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -17,7 +17,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>分类 | codePigPig</title>
+    <title>分类: 轮播分类测试2 | codePigPig</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
@@ -388,7 +388,7 @@
                 
                 <a href="/categories/%E8%BD%AE%E6%92%AD%E5%88%86%E7%B1%BB%E6%B5%8B%E8%AF%951/%E8%BD%AE%E6%92%AD%E5%88%86%E7%B1%BB%E6%B5%8B%E8%AF%952/" title="轮播分类测试2: 1">
                     <span class="chip center-align waves-effect waves-light
-                             chip-default "
+                             chip-active "
                             style="background-color: #D5F5E3;">轮播分类测试2
                         <span class="tag-length">1</span>
                     </span>
@@ -402,65 +402,70 @@
 
 
     
-    <style type="text/css">
-    #category-radar {
-        width: 100%;
-        height: 360px;
-    }
-</style>
 
-<div class="container" data-aos="fade-up">
-    <div class="card">
-        <div id="category-radar" class="card-content"></div>
-    </div>
-</div>
+    <article id="articles" class="container articles">
+        <div class="row tags-posts">
+            
+            <div class="article tag-post col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/2021/12/21/shou-ye-lun-bo/">
+                        <div class="card-image tag-image">
+                            
+                            
+                            <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="首页轮播">
+                            
+                            <span class="card-title">首页轮播</span>
+                        </div>
+                    </a>
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                特性
+简单漂亮，文章内容美观易读
+Material Design 设计
+响应式设计，博客在桌面端、平板、手机等设备上均能很好的展现
+首页轮播文章及每天动态切换 Banner 图片
+瀑布流式的博客文章列表（文章无特色图片时会有 24 张漂亮的
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-12-21
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/%E8%BD%AE%E6%92%AD%E5%88%86%E7%B1%BB%E6%B5%8B%E8%AF%951/" class="post-category">
+                                    轮播分类测试1
+                                </a>
+                                
+                                <a href="/categories/%E8%BD%AE%E6%92%AD%E5%88%86%E7%B1%BB%E6%B5%8B%E8%AF%951/%E8%BD%AE%E6%92%AD%E5%88%86%E7%B1%BB%E6%B5%8B%E8%AF%952/" class="post-category">
+                                    轮播分类测试2
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
 
-<script type="text/javascript" src="/libs/echarts/echarts.min.js"></script>
-<script type="text/javascript">
-    let radarChart = echarts.init(document.getElementById('category-radar'));
-
-    
-
-    let option = {
-        title: {
-            left: 'center',
-            text: '文章分类雷达图',
-            textStyle: {
-                fontWeight: 500,
-                fontSize: 22
-            }
-        },
-        tooltip: {},
-        radar: {
-            name: {
-                textStyle: {
-                    color: '#3C4858'
-                }
-            },
-            indicator: [{"name":"分类测试","max":2},{"name":"轮播分类测试1","max":2},{"name":"轮播分类测试2","max":2}],
-            nameGap: 5,
-            center: ['50%','55%'],
-            radius: '66%'
-        },
-        series: [{
-            type: 'radar',
-            color: ['#3ecf8e'],
-            itemStyle: {normal: {areaStyle: {type: 'default'}}},
-            data : [
-                {
-                    value : [1,1,1],
-                    name : '文章分类数量'
-                }
-            ]
-        }]
-    };
-
-    radarChart.setOption(option);
-</script>
-
-    
-
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/%E8%BD%AE%E6%92%AD%E6%A0%87%E7%AD%BE%E6%B5%8B%E8%AF%951/">
+                            <span class="chip bg-color">轮播标签测试1</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+        </div>
+    </article>
 </main>
+
+
 
 
     <footer class="page-footer bg-color">
