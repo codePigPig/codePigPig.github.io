@@ -6,7 +6,7 @@
   <link href="https://codepigpig.github.io/atom.xml" rel="self"/>
   
   <link href="https://codepigpig.github.io/"/>
-  <updated>2022-03-01T07:38:35.715Z</updated>
+  <updated>2022-03-07T07:08:28.315Z</updated>
   <id>https://codepigpig.github.io/</id>
   
   <author>
@@ -15,6 +15,56 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>RocketMQ特性</title>
+    <link href="https://codepigpig.github.io/2022/03/07/rocketmq-te-xing/"/>
+    <id>https://codepigpig.github.io/2022/03/07/rocketmq-te-xing/</id>
+    <published>2022-03-07T07:07:16.000Z</published>
+    <updated>2022-03-07T07:08:28.315Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;1-订阅与发布&quot;&gt;&lt;a href=&quot;#1-订阅与发布&quot; class=&quot;headerlink&quot; title=&quot;1 订阅与发布&quot;&gt;&lt;/a&gt;1</summary>
+        
+      
+    
+    
+    
+    <category term="RocketMQ" scheme="https://codepigpig.github.io/categories/RocketMQ/"/>
+    
+    
+    <category term="RocketMQ特性" scheme="https://codepigpig.github.io/tags/RocketMQ%E7%89%B9%E6%80%A7/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>RocketMQ基础概念</title>
+    <link href="https://codepigpig.github.io/2022/03/07/rocketmq-ji-chu-gai-nian/"/>
+    <id>https://codepigpig.github.io/2022/03/07/rocketmq-ji-chu-gai-nian/</id>
+    <published>2022-03-07T06:59:06.000Z</published>
+    <updated>2022-03-07T07:10:18.042Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;1 消息模型（Message</summary>
+        
+      
+    
+    
+    
+    <category term="RocketMQ" scheme="https://codepigpig.github.io/categories/RocketMQ/"/>
+    
+    
+    <category term="RocketMQ基础概念" scheme="https://codepigpig.github.io/tags/RocketMQ%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5/"/>
+    
+  </entry>
   
   <entry>
     <title>Spring监听机制实战</title>
@@ -464,56 +514,6 @@
         
         
     <summary type="html">&lt;h1 id=&quot;Java数据类转换&quot;&gt;&lt;a href=&quot;#Java数据类转换&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="JavaSE" scheme="https://codepigpig.github.io/categories/JavaSE/"/>
-    
-    
-    <category term="数据类型" scheme="https://codepigpig.github.io/tags/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>JavaSE(04)-基本数据类型的拓展</title>
-    <link href="https://codepigpig.github.io/2021/12/23/javase-04-ji-ben-shu-ju-lei-xing-de-tuo-zhan/"/>
-    <id>https://codepigpig.github.io/2021/12/23/javase-04-ji-ben-shu-ju-lei-xing-de-tuo-zhan/</id>
-    <published>2021-12-23T11:42:07.000Z</published>
-    <updated>2021-12-28T08:07:33.245Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;基本数据类型的拓展&quot;&gt;&lt;a href=&quot;#基本数据类型的拓展&quot; class=&quot;headerlink&quot; title=&quot;基本数据类型的拓展&quot;&gt;&lt;/a&gt;基本数据类型的拓展&lt;/h1&gt;&lt;h4 id=&quot;一、整数类型拓展：&quot;&gt;&lt;a href=&quot;#一、整数类型拓展：&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="JavaSE" scheme="https://codepigpig.github.io/categories/JavaSE/"/>
-    
-    
-    <category term="数据类型" scheme="https://codepigpig.github.io/tags/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>JavaSE(03)-Java数据类型</title>
-    <link href="https://codepigpig.github.io/2021/12/23/javase-03-java-shu-ju-lei-xing/"/>
-    <id>https://codepigpig.github.io/2021/12/23/javase-03-java-shu-ju-lei-xing/</id>
-    <published>2021-12-23T11:38:29.000Z</published>
-    <updated>2021-12-28T08:07:33.267Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h3 id=&quot;数据类型&quot;&gt;&lt;a href=&quot;#数据类型&quot; class=&quot;headerlink&quot;</summary>
         
       
     

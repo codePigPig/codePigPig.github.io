@@ -4,8 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Spring监听机制实战, codePigPig">
-    <meta name="description" content="spring">
+    <meta name="keywords" content="RocketMQ特性, codePigPig">
+    <meta name="description" content="RocketMQ特性">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +17,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Spring监听机制实战 | codePigPig</title>
+    <title>RocketMQ特性 | codePigPig</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
@@ -320,12 +320,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/4.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Spring监听机制实战</h1>
+                    <h1 class="description center-align post-title">RocketMQ特性</h1>
                 </div>
             </div>
         </div>
@@ -335,10 +335,104 @@
 
 
 
-<main class="container content">
+<main class="post-container content">
 
     
-    <!-- 文章内容详情 -->
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        padding: 35px 0 15px 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        padding-bottom: 30px;
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
 <div id="artDetail">
     <div class="card">
         <div class="card-content article-info">
@@ -347,8 +441,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/spring%E7%9B%91%E5%90%AC%E6%9C%BA%E5%88%B6/">
-                                <span class="chip bg-color">spring监听机制</span>
+                            <a href="/tags/RocketMQ%E7%89%B9%E6%80%A7/">
+                                <span class="chip bg-color">RocketMQ特性</span>
                             </a>
                         
                     </div>
@@ -359,8 +453,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/spring/" class="post-category">
-                                spring
+                            <a href="/categories/RocketMQ/" class="post-category">
+                                RocketMQ
                             </a>
                         
                     </div>
@@ -372,28 +466,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2022-03-01
+                    2022-03-07
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-03-01
+                    2022-03-07
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    520
+                    2.5k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    2 分
+                    8 分
                 </div>
                 
 
@@ -418,153 +512,200 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="概述："><a href="#概述：" class="headerlink" title="概述："></a>概述：</h3><ul>
-<li>Spring中事件机制：ApplicationEventPublisher，实现监听ApplicationEvent，最后利用事件通知实现通知实现异步操作。</li>
-</ul>
-<h3 id="为什么异步操作："><a href="#为什么异步操作：" class="headerlink" title="为什么异步操作："></a>为什么异步操作：</h3><ul>
-<li>在有多个上下游服务的情况下，服务之间互相调用，存在耗时，当我们调用方不需要此操作返回时，可以异步执行，调用接口，该接口快速返回，减少接口响应时长。</li>
-<li>代码逻辑性清晰，对于需要多个异步操作的可以实现事件的统一管理，不用创建线程池，减少资源的消耗。</li>
-</ul>
-<h3 id="demo流程图："><a href="#demo流程图：" class="headerlink" title="demo流程图："></a>demo流程图：</h3><p><img src="https://gitee.com/codePigPig/blogImages/raw/master/uPic/1646106176683-596cb5ff-a107-467c-a765-8551b7542a58-20220301115133502.png" alt="img"></p>
-<h3 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h3><h4 id="创建事件"><a href="#创建事件" class="headerlink" title="创建事件"></a>创建事件</h4><ul>
-<li>创建事件实体类</li>
-</ul>
-<pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
- * @description: 消息
- * @author: wangzhibu
- * @date: 2022/2/25 2:27 下午
- */</span>
-<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">SendMessageEventDto</span> <span class="token punctuation">{</span>
-
-    <span class="token comment" spellcheck="true">/**
-     * 用户ID
-     */</span>
-    <span class="token keyword">private</span> Integer userId<span class="token punctuation">;</span>
-
-    <span class="token comment" spellcheck="true">/**
-     * 手机号
-     */</span>
-    <span class="token keyword">private</span> String mobile<span class="token punctuation">;</span>
-
-    <span class="token comment" spellcheck="true">/**
-     * 短信模版参数数据体
-     */</span>
-    <span class="token keyword">private</span> String data<span class="token punctuation">;</span>
-    
-    <span class="token comment" spellcheck="true">// 构造方法和getter、setter方法省略..</span>
-    
-<span class="token punctuation">}</span>
-</code></pre>
+                <h2 id="1-订阅与发布"><a href="#1-订阅与发布" class="headerlink" title="1 订阅与发布"></a>1 订阅与发布</h2><p>概述：</p>
 <ul>
-<li>创建事件，继承ApplicationEvent</li>
+<li>消息的发布：指某个生产者向某个<code>Topic</code>发送消息。</li>
+<li>消息的订阅：指某个消费者关注了某个<code>Topic</code>中带有某些<code>Tag</code>的消息，进而从该<code>Topic</code>消费数据</li>
 </ul>
-<pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
- * @description: 事件
- * @author: wangzhibu
- * @date: 2022/2/25 2:29 下午
- */</span>
-<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">SendMessageEvent</span> <span class="token keyword">extends</span> <span class="token class-name">ApplicationEvent</span> <span class="token punctuation">{</span>
-
-    <span class="token keyword">private</span> SendMessageEventDto sendMessageEventDto<span class="token punctuation">;</span>
-
-    <span class="token keyword">public</span> <span class="token function">SendMessageEvent</span><span class="token punctuation">(</span>Object source<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token keyword">super</span><span class="token punctuation">(</span>source<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-
-    <span class="token keyword">public</span> <span class="token function">SendMessageEvent</span><span class="token punctuation">(</span>Object source<span class="token punctuation">,</span>SendMessageEventDto dto<span class="token punctuation">)</span><span class="token punctuation">{</span>
-        <span class="token keyword">super</span><span class="token punctuation">(</span>source<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token keyword">this</span><span class="token punctuation">.</span>sendMessageEventDto <span class="token operator">=</span> dto<span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-
-    <span class="token keyword">public</span> SendMessageEventDto <span class="token function">getSendMessageEventDto</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token keyword">return</span> sendMessageEventDto<span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">setSendMessageEventDto</span><span class="token punctuation">(</span>SendMessageEventDto sendMessageEventDto<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token keyword">this</span><span class="token punctuation">.</span>sendMessageEventDto <span class="token operator">=</span> sendMessageEventDto<span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
-</code></pre>
-<h4 id="创建监听类"><a href="#创建监听类" class="headerlink" title="创建监听类"></a>创建监听类</h4><ul>
-<li>监听类，主要作用是做监听后的逻辑操作</li>
+<h2 id="2-消息顺序"><a href="#2-消息顺序" class="headerlink" title="2 消息顺序"></a>2 消息顺序</h2><p>概述：</p>
+<ul>
+<li><p>消息有序指的是一类消息消费时，<strong>能够按照发送的顺序来消费</strong>。RocketMQ可以严格的保证消息有序。</p>
+</li>
+<li><p>例如：一个订单产量三条消息分别是订单创建、订单付款、订单完成。消费是要按照这个顺序消费才能有意义，但是同时订单之间是可以并行消费的。</p>
+</li>
+<li><p>消息顺序范围全局顺序与分区顺序消息。</p>
+</li>
+<li><p><strong>全局顺序消息：指某个</strong><code>**Topic**</code><strong>下的所有消息都要保证顺序。</strong></p>
+</li>
+<li><ul>
+<li>全局顺序对于指定的一个<code>Topic</code>，所有消息按照严格的先入先出（FIFO）的顺序进行发布和消费。</li>
+<li>使用场景：性能要求不高，所欲的消息严格按照FIFO原则进行消息发布和消费的场景。</li>
 </ul>
-<pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
- * @description: 监听类
- * @author: wangzhibu
- * @date: 2022/2/25 2:58 下午
- */</span>
-<span class="token annotation punctuation">@Slf4j</span>
-<span class="token annotation punctuation">@Component</span>
-<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">SendMessageListener</span> <span class="token punctuation">{</span>
-
-    <span class="token annotation punctuation">@Async</span>
-    <span class="token annotation punctuation">@EventListener</span>
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">sendMessage</span><span class="token punctuation">(</span>SendMessageEvent sendMessageEvent<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token keyword">try</span> <span class="token punctuation">{</span>
-            SendMessageEventDto dto <span class="token operator">=</span> sendMessageEvent<span class="token punctuation">.</span><span class="token function">getSendMessageEventDto</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-            log<span class="token punctuation">.</span><span class="token function">info</span><span class="token punctuation">(</span><span class="token string">"模拟发送短信通知 -> 数据体为 -> "</span><span class="token operator">+</span> dto<span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-        <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span><span class="token class-name">Exception</span> e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-            e<span class="token punctuation">.</span><span class="token function">getMessage</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-            e<span class="token punctuation">.</span><span class="token function">printStackTrace</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
-</code></pre>
-<h4 id="创建业务类"><a href="#创建业务类" class="headerlink" title="创建业务类"></a>创建业务类</h4><ul>
-<li>让具体业务持有该事件，并设置被监听状体</li>
+</li>
+<li><p><strong>分区顺序消息：只要保证给每一组消息被顺序消费即可。</strong></p>
+</li>
+<li><ul>
+<li><strong>分区顺序对于指定的一个</strong><code>**Topic**</code><strong>，所有消息根据</strong><code>**sharding key**</code><strong>进行区块分区。</strong>同一个分区内的消息严格按照FIFO顺序进行发布和消费。</li>
+<li><code>Sharding key</code>是顺序消费中用来区分不同分区的字段，和不同消息的<code>Key</code>是完全不同的概念。</li>
 </ul>
-<pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
- * @description: 模拟业务
- * @author: wangzhibu
- * @date: 2022/2/25 2:51 下午
- */</span>
-<span class="token annotation punctuation">@Service</span>
-<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">SendMessageServiceImpl</span> <span class="token keyword">implements</span> <span class="token class-name">SendMessageService</span> <span class="token punctuation">{</span>
-
-    <span class="token annotation punctuation">@Autowired</span>
-    <span class="token keyword">private</span> ApplicationEventPublisher applicationEventPublisher<span class="token punctuation">;</span>
-
-    <span class="token annotation punctuation">@Override</span>
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">publishMessage</span><span class="token punctuation">(</span>String mobile<span class="token punctuation">,</span> Integer userId<span class="token punctuation">,</span> String data<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        SendMessageEvent event <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">SendMessageEvent</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        SendMessageEventDto dto <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">SendMessageEventDto</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        dto<span class="token punctuation">.</span><span class="token function">setUserId</span><span class="token punctuation">(</span>userId<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        dto<span class="token punctuation">.</span><span class="token function">setMobile</span><span class="token punctuation">(</span>mobile<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        dto<span class="token punctuation">.</span><span class="token function">setData</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-        event<span class="token punctuation">.</span><span class="token function">setSendMessageEventDto</span><span class="token punctuation">(</span>dto<span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-        <span class="token comment" spellcheck="true">// 将事件交给spring监听</span>
-        applicationEventPublisher<span class="token punctuation">.</span><span class="token function">publishEvent</span><span class="token punctuation">(</span>event<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-
-<span class="token punctuation">}</span>
-</code></pre>
-<h4 id="创建测试类"><a href="#创建测试类" class="headerlink" title="创建测试类"></a>创建测试类</h4><pre class=" language-java"><code class="language-java"><span class="token keyword">import</span> cn<span class="token punctuation">.</span>study<span class="token punctuation">.</span>demo<span class="token punctuation">.</span>service<span class="token punctuation">.</span>SendMessageService<span class="token punctuation">;</span>
-<span class="token keyword">import</span> org<span class="token punctuation">.</span>junit<span class="token punctuation">.</span>Test<span class="token punctuation">;</span>
-<span class="token keyword">import</span> org<span class="token punctuation">.</span>junit<span class="token punctuation">.</span>runner<span class="token punctuation">.</span>RunWith<span class="token punctuation">;</span>
-<span class="token keyword">import</span> org<span class="token punctuation">.</span>springframework<span class="token punctuation">.</span>beans<span class="token punctuation">.</span>factory<span class="token punctuation">.</span>annotation<span class="token punctuation">.</span>Autowired<span class="token punctuation">;</span>
-<span class="token keyword">import</span> org<span class="token punctuation">.</span>springframework<span class="token punctuation">.</span>boot<span class="token punctuation">.</span>test<span class="token punctuation">.</span>context<span class="token punctuation">.</span>SpringBootTest<span class="token punctuation">;</span>
-<span class="token keyword">import</span> org<span class="token punctuation">.</span>springframework<span class="token punctuation">.</span>test<span class="token punctuation">.</span>context<span class="token punctuation">.</span>junit4<span class="token punctuation">.</span>SpringRunner<span class="token punctuation">;</span>
-
-<span class="token comment" spellcheck="true">/**
- * @description: 测试类
- * @author: wangzhibu
- * @date: 2022/2/25 3:46 下午
- */</span>
-<span class="token annotation punctuation">@RunWith</span><span class="token punctuation">(</span>SpringRunner<span class="token punctuation">.</span><span class="token keyword">class</span><span class="token punctuation">)</span>
-<span class="token annotation punctuation">@SpringBootTest</span>
-<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">SpringListenerTest</span> <span class="token punctuation">{</span>
-
-    <span class="token annotation punctuation">@Autowired</span>
-    <span class="token keyword">private</span> SendMessageService sendMessageService<span class="token punctuation">;</span>
-    <span class="token annotation punctuation">@Test</span>
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">test</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        sendMessageService<span class="token punctuation">.</span><span class="token function">publishMessage</span><span class="token punctuation">(</span><span class="token string">"18580770760"</span><span class="token punctuation">,</span> <span class="token number">121</span><span class="token punctuation">,</span> <span class="token string">"测试spring监听"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
-</code></pre>
+</li>
+<li><ul>
+<li>使用场景：性能要求高，以<code>Sharding key</code>作为分区字段，在同一个区块中严格的按照FIFO原则进行消息发布和消费的场景。</li>
+</ul>
+</li>
+</ul>
+<h2 id="3-消息过滤"><a href="#3-消息过滤" class="headerlink" title="3 消息过滤"></a>3 消息过滤</h2><p>概述：</p>
+<ul>
+<li><p>RocketMQ的消费者可以根据<code>Tag</code>进行消息过滤，也支持自定义属性过滤。</p>
+</li>
+<li><p>消息过滤目的是在<code>Broker</code>端实现的。</p>
+</li>
+<li><p><strong>优点：</strong>减少了对于<code>Consumer</code>无用消息的网络传输。</p>
+</li>
+<li><p><strong>缺点：</strong>增加了<code>Broker</code>的负担、而且实现相当复杂。</p>
+</li>
+</ul>
+<h2 id="4-消息可靠性"><a href="#4-消息可靠性" class="headerlink" title="4 消息可靠性"></a>4 消息可靠性</h2><p>概述：</p>
+<ul>
+<li>RocketMQ支持消息的高可靠，影响消息可靠性的几种情况如下</li>
+</ul>
+<ol>
+<li><ol>
+<li><code>Broker</code>非正常关闭。</li>
+<li><code>Broker</code>异常<code>Crash</code></li>
+</ol>
+</li>
+<li><ol>
+<li><code>OS Crash</code></li>
+<li>机器掉电，但是能立即恢复供电情况。</li>
+</ol>
+</li>
+<li><ol>
+<li>机器无法开机（可能是CPU、主板、内存等关键设备损坏）。</li>
+<li>磁盘上设备损坏。</li>
+</ol>
+</li>
+</ol>
+<ul>
+<li><p><code>a、b、c、d</code>这四种情况属于硬件资源可立即恢复情况。RocketMQ在这四种情况下能保证消息不丢，或者丢少量数据（依赖刷盘方式是同步还是异步）。</p>
+</li>
+<li><p><code>e、f</code>属于单点故障，且无法恢复，一旦发送，在此单点的消息全部丢失。RocketMQ在这两种情况下，通过异步复制，可保证99%的 消息不丢，但是仍然会有少量的消息丢失。</p>
+</li>
+<li><p>通过同步双鞋技术可以完全避免单点故障情况，同步双写会影响性能，适合对消息可靠性要求极高的场合。例如与<strong>金钱</strong>相关的应用。</p>
+</li>
+<li><p>注：RocketMQ从3.0版开始支持同步双写。</p>
+</li>
+</ul>
+<h2 id="5-至少一次"><a href="#5-至少一次" class="headerlink" title="5 至少一次"></a>5 至少一次</h2><p>概述：</p>
+<ul>
+<li>至少一次（<code>At Least Once</code>）指每个消息必须投递一次。</li>
+<li><code>Consumer</code>先<code>Pull</code>消息到本地，消费完成后，才向<code>Broker</code>服务器发返回ack，如果没有消费一定不会ack消息，所有RocketMQ可以很好的支持此特性。</li>
+</ul>
+<h2 id="6-回溯消费"><a href="#6-回溯消费" class="headerlink" title="6 回溯消费"></a>6 回溯消费</h2><p>概述：</p>
+<ul>
+<li><p>回溯消费是指<code>Consumer</code>已经消费成功的消息，由于业务上需求需要重新消费，要支持此功能，<code>Broker</code>在向<code>Consumer</code>投递消息成功后，消息仍然需要保留。</p>
+</li>
+<li><p>重新消费一般是按照时间维度，例如由于<code>Consumer</code>系统故障，恢复后需要重新消费1小时前的数据，那么<code>Broker</code>需提供一种机制，可以按照时间维度来回退消费进度。</p>
+</li>
+<li><p>RocketMQ支持按照时间回溯消费，<strong>时间维度精确到毫秒</strong>。</p>
+</li>
+</ul>
+<h2 id="7-事务消息"><a href="#7-事务消息" class="headerlink" title="7 事务消息"></a>7 事务消息</h2><p>概述：</p>
+<ul>
+<li>RocketMQ事务消息（<code>Transactional Message</code>）是指应用本地事务和发送消息操作可以被定义到全局事务中，要么同时成功，要么同时失败。</li>
+<li>RocketMQ的事务消费提供类似<code>X/Open XA</code>的分布事务功能，通过事务消息能达到分布式事务的一致性。</li>
+</ul>
+<h2 id="8-定时消息"><a href="#8-定时消息" class="headerlink" title="8 定时消息"></a>8 定时消息</h2><p>概述：</p>
+<ul>
+<li><p>定时i消息（延长队列）是指消息发送到<code>Broker</code>后，不会立即被消费，等待特定时间投递给真正的<code>Topic</code>。</p>
+</li>
+<li><p><code>Broker</code>有配置项<code>messageDelayLevel</code>“1s、5s、10s 、30s、 1m、2m、3m、4m、5m、6m、7m、8m、9m、10m、20m、30m、1h、2h”，18个时间Level。</p>
+</li>
+<li><p>也可以自定义配置<code>messageDelayLevel</code></p>
+</li>
+<li><p><code>messageDelayLevel</code>是<code>Broker</code>的属性，不属于某个<code>Topic</code>，发送消息时，设置<code>delayLevel</code>等级即可：<code>msg.setDelayLevel(level)</code></p>
+</li>
+<li><p>注意：Level存在一下三种情况：</p>
+</li>
+<li><ul>
+<li><code>level == 0</code>，消息为非延迟消息。</li>
+<li><code>1 &lt;= level &lt;= maxLevel</code>，消息延迟特定时间，例如<code>level == 1</code>，延迟1s。</li>
+</ul>
+</li>
+<li><ul>
+<li><code>level &gt; maxLevel</code>，则<code>level == maxLevel</code>，例如<code>level == 20</code>，延迟2h。</li>
+</ul>
+</li>
+<li><p>定时消息会暂存在名为<code>SCHEDULE_TOPIC_XXXX</code>的<code>Topic</code>中，并根据<code>delayTimeLevel</code>存入特定的<code>queue</code>，<code>queueId = delayTimeLevel -1</code>，<strong>即一个queue只存相同延迟的消息，保证具有相同发送延迟的消息能够顺序消费。</strong><code>Broker</code>会调度地消费<code>SCHEDULE_TOPIC_XXXX</code>，将消息写入真实的<code>Topic</code>。</p>
+</li>
+<li><p>注意：<strong>定时消息会在第一次写入和调度写入真实</strong><code>**Topic**</code><strong>时都会计数</strong>，因此发送数量、tps都会变高。</p>
+</li>
+</ul>
+<h2 id="9-消息重试"><a href="#9-消息重试" class="headerlink" title="9 消息重试"></a>9 消息重试</h2><p>概述：</p>
+<ul>
+<li><code>Consumer</code>消费消息失败后，需提供一种重试机制，令消费者再消费一次。</li>
+</ul>
+<p><code>Consumer消</code>费消息失败通常可以认为有一下几种情况：</p>
+<ul>
+<li>由于消息本身的原因，例如反序列化失败，消息数据本身无法处理（例如话费充值，当前消息的手机号被注销，无法充值）等。这种错误通常需要跳过这条消息，再消费其他消息，而这条失败的消息即使立即重试消息，99%也不会成功，所以做好提供一种定时重试机制，即过10秒再重试。</li>
+<li>由于依赖的下游应用服务不可用，例如db连接不可用，外系统网络不可达等。遇到这种错误，即使跳过当前失败消息，消费其他消息同样也会报错。这种情况建议应用<code>sleep 30s</code>，再消费下一条消息，这样可以减轻<code>Broker</code>重试消息的压力。</li>
+</ul>
+<p>RocketMQ的重试队列：</p>
+<ul>
+<li><p>RocketMQ会为每个消费组设置一个<code>Topic</code>名称为<code>%RETRY%+consumerGroup</code>的重试队列（这里需要注意的是，这个<code>Topic</code>的重试队列是针对消费组，而不是针对每个<code>Topic</code>设置的），用于暂时保存因为各种异常而导致<code>Consumer</code>端无法消息的消息。</p>
+</li>
+<li><p>考虑到异常恢复起来需要一定时间，会为重试队列设置多个重试级别，每个重试级别都有与之对应的重新投递延时，重试次数越多投递延时就越大。</p>
+</li>
+<li><p>RocketMQ对于重试消息的处理是先保存至<code>Topic</code>名称为<code>SCHEDULE_TOPIC_XXXX</code>的延时队列中，后台定时任务按照对应的时间进行<code>Delay</code>后保存至<code>%RETRY%+consumerGroup</code>的重试对垒中。</p>
+</li>
+</ul>
+<h2 id="10-消息重投"><a href="#10-消息重投" class="headerlink" title="10 消息重投"></a>10 消息重投</h2><p>概述：</p>
+<ul>
+<li><p>生产者在发送消息时，同步消息失败会重试，异步消息有重试，<code>oneway</code>没有任何保证。</p>
+</li>
+<li><p>消息重投保证消息尽可能发送成功、不丢失，但可能会造成消息重复，消息重复在RocketMQ中是无法避免的问题。</p>
+</li>
+<li><p>消息重复在一般情况下不会发生，当出现消息量大、网络抖动，消息重复大概率出现。</p>
+</li>
+<li><p>生产者主动重发、<code>consumer</code>负载变化也会导致重复消息。</p>
+</li>
+</ul>
+<p>RocketMQ设置消息重制策略：</p>
+<ul>
+<li><p><code>retryTimesWhenSendFailed</code>：同步发送失败重投次数，<strong>默认为2</strong>，因此生产者会最多尝试发送<code>retryTimesWhenSendFailed + 1</code>此。不会选择上次失败的<code>Broker</code>，尝试向其他<code>Broker</code>发送，最大成都保证消息不丢。</p>
+</li>
+<li><p>超过重投次数，跑出异常，由客户端保证消息不对，当出现<code>RemotingException</code>、<code>MQClientException</code>、<code>部分MQBrokerException</code>时会重投。</p>
+</li>
+<li><p><code>retryAnotherBrokerWhenNotStoreOK</code>：消息刷盘（主或者备）超时或<code>slave</code>不可用（返回状态非SEND_OK），是否尝试发送到其他<code>Broker</code>，默认是<code>false</code>。十分重要消息可以开启。</p>
+</li>
+</ul>
+<h2 id="11-流量控制"><a href="#11-流量控制" class="headerlink" title="11 流量控制"></a>11 流量控制</h2><p>概述：</p>
+<ul>
+<li>生产者流控：因为<code>Broket</code>处理能力达到瓶颈。</li>
+<li>消费者流控：因为洗哦阿肥能力达到瓶颈。</li>
+</ul>
+<p><strong>生产者流控：</strong></p>
+<ul>
+<li><p><code>commitLog</code>文件备锁时间超过<code>osPageCacheBusyTimeOutMills</code>时，参数默认为<code>1000ms</code>，返回流控。</p>
+</li>
+<li><p>如果开启<code>transientStorePoolEnable == true</code>，且<code>Broket</code>为异步刷盘的主机，且<code>transientStorePool</code>中资源不足，拒绝当前<code>send</code>请求，返回流控。</p>
+</li>
+<li><p><code>Broker</code>每隔<code>10ms</code>检查<code>send</code>请求队列头部请求的等待时间，如果超过<code>waitTimeMillsLnSendQueue</code>，默认<code>200ms</code>，拒绝当前请求<code>send</code>请求，返回流控。</p>
+</li>
+<li><p><code>Broket</code>通过拒绝<code>send</code>请求方式实现流量控制。</p>
+</li>
+<li><p><strong>生产者流控，不会尝试消息重投</strong>。</p>
+</li>
+</ul>
+<p><strong>消费者流控：</strong></p>
+<ul>
+<li><p>消费者本地缓存消息超过<code>pullThresholdForQueue</code>时，默认<code>1000</code>。</p>
+</li>
+<li><p>消费者本地缓存消息大小超过<code>pullThresholdSizeForQueue</code>时，默认<code>100MB</code>。</p>
+</li>
+<li><p>消费者本地缓存消息跨度超过<code>consumeConcurrentlyMaxSpan</code>时，默认<code>2000</code>。</p>
+</li>
+</ul>
+<h2 id="12-死信队列"><a href="#12-死信队列" class="headerlink" title="12 死信队列"></a>12 死信队列</h2><p>概述：</p>
+<ul>
+<li>死信队列用于处理无法被正常消费的信息。</li>
+<li>当一条信息初次消费失败，消息队列会自动进行消息重试，达到最大重试次数后，若消费依然失败，则表明消费者在正常情况下无法正常地消费该消息，此时，洗哦阿西队列不会立刻将消息丢弃，而是将其发送到该消费者对应的特殊队列中。</li>
+</ul>
+<p>RocketMQ死信消息：</p>
+<ul>
+<li>RocketMQ将这种情况下无法被消费的消息称为死信消息（<code>Dead-Letter Message</code>），将存储死信消息的特殊队列称为死信队列（Dead-Letter Queue）。</li>
+<li>在RocketMQ中，可以通过使用<code>console</code>控制台对死信队列中的消息重发来使得消费者实例再次进行消费。</li>
+</ul>
 
                 
             </div>
@@ -591,7 +732,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://codepigpig.github.io/2022/03/01/spring-jian-ting-ji-zhi-shi-zhan/">https://codepigpig.github.io/2022/03/01/spring-jian-ting-ji-zhi-shi-zhan/</a>
+                    <a href="https://codepigpig.github.io/2022/03/07/rocketmq-te-xing/">https://codepigpig.github.io/2022/03/07/rocketmq-te-xing/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -629,8 +770,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/spring%E7%9B%91%E5%90%AC%E6%9C%BA%E5%88%B6/">
-                                    <span class="chip bg-color">spring监听机制</span>
+                                <a href="/tags/RocketMQ%E7%89%B9%E6%80%A7/">
+                                    <span class="chip bg-color">RocketMQ特性</span>
                                 </a>
                             
                         </div>
@@ -676,9 +817,60 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
+            <div class="card">
+                <a href="/2022/03/07/rocketmq-te-xing/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="RocketMQ特性">
+                        
+                        <span class="card-title">RocketMQ特性</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            RocketMQ特性
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-03-07
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/RocketMQ/" class="post-category">
+                                    RocketMQ
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/RocketMQ%E7%89%B9%E6%80%A7/">
+                        <span class="chip bg-color">RocketMQ特性</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
             <div class="card">
                 <a href="/2022/03/07/rocketmq-ji-chu-gai-nian/">
                     <div class="card-image">
@@ -696,9 +888,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-03-07
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-03-07
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -716,55 +908,6 @@
                     
                     <a href="/tags/RocketMQ%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5/">
                         <span class="chip bg-color">RocketMQ基础概念</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2021/12/29/pai-xu-03-kuai-su-pai-xu/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="排序-03-快速排序">
-                        
-                        <span class="card-title">排序-03-快速排序</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-12-29
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/%E5%B8%B8%E8%A7%81%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/" class="post-category">
-                                    常见排序算法
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F/">
-                        <span class="chip bg-color">快速排序</span>
                     </a>
                     
                 </div>
@@ -833,6 +976,100 @@
 
 <script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
 
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
 
     
 
