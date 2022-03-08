@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>iterm2配置免密连接阿里云服务器</title>
+      <link href="/2022/03/08/iterm2-pei-zhi-mian-mi-lian-jie-a-li-yun-fu-wu-qi/"/>
+      <url>/2022/03/08/iterm2-pei-zhi-mian-mi-lian-jie-a-li-yun-fu-wu-qi/</url>
+      
+        <content type="html"><![CDATA[<h2 id="1-配置"><a href="#1-配置" class="headerlink" title="1 配置"></a>1 配置</h2><h3 id="1-1-配置脚本命令"><a href="#1-1-配置脚本命令" class="headerlink" title="1.1 配置脚本命令"></a>1.1 配置脚本命令</h3><p>代码：</p><pre class=" language-shell"><code class="language-shell">// 创建脚本文件vim /Users/codepigpig/shdocs/iterm2loginaliyun.sh// 填写脚本信息#!/usr/bin/expectset timeout 30spawn ssh -p [lindex $argv 0] [lindex $argv 1]@[lindex $argv 2]expect {"(yes/no)?"{send "yes\n";exp_continue}"password:"{send "[lindex $argv 3]\n"}}interact</code></pre><h3 id="1-1-配置iterm2"><a href="#1-1-配置iterm2" class="headerlink" title="1.1 配置iterm2"></a>1.1 配置iterm2</h3><ul><li><p>点击<code>Preferences =》 Profiles</code></p></li><li><p>新增配置文件</p></li><li><p>输入配置文件名称</p></li><li><p>选择Login Shell</p></li><li><p>输入脚本配置信息</p></li></ul><p>代码：</p><pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">// 脚本绝对地址 端口 账户名 服务器地址 密码</span><span class="token operator">/</span>Users<span class="token operator">/</span>codepigpig<span class="token operator">/</span>shdocs<span class="token operator">/</span>iterm2loginaliyun<span class="token punctuation">.</span>sh <span class="token number">22</span> root <span class="token number">121.43</span><span class="token punctuation">.</span><span class="token number">96.220</span> password</code></pre><p>操作图解：</p><p><img src="https://gitee.com/codePigPig/blogImages/raw/master/uPic/1646709177159-0b568470-fc9b-4807-9453-8561b941614e.png" alt="img"></p><h3 id="1-3-测试连接"><a href="#1-3-测试连接" class="headerlink" title="1.3 测试连接"></a>1.3 测试连接</h3><ul><li>点击工具栏的<code>Profiles =》 aliyun</code></li></ul><p>操作图解：</p><p><img src="https://gitee.com/codePigPig/blogImages/raw/master/uPic/item1.png" alt="item1"></p><ul><li>连接成功！</li></ul><p>图解：</p><p><img src="https://gitee.com/codePigPig/blogImages/raw/master/uPic/itrem2.png" alt="itrem2"></p><h2 id="2-遇到问题"><a href="#2-遇到问题" class="headerlink" title="2 遇到问题"></a>2 遇到问题</h2><h3 id="2-1-iterm2读取脚本文件无权限"><a href="#2-1-iterm2读取脚本文件无权限" class="headerlink" title="2.1 iterm2读取脚本文件无权限"></a>2.1 iterm2读取脚本文件无权限</h3><p>错误原因：</p><ul><li>权限不足。</li></ul><p>解决方法：</p><ul><li>修改脚本文件的权限。</li></ul><p>代码：</p><pre class=" language-java"><code class="language-java">chmod <span class="token number">777</span> <span class="token operator">/</span>Users<span class="token operator">/</span>codepigpig<span class="token operator">/</span>shdocs<span class="token operator">/</span>iterm2loginaliyun<span class="token punctuation">.</span>sh</code></pre><h3 id="2-2-连接时iterm2-配置信息报错"><a href="#2-2-连接时iterm2-配置信息报错" class="headerlink" title="2.2 连接时iterm2 配置信息报错"></a>2.2 连接时iterm2 配置信息报错</h3><p>报错图：</p><p><img src="https://gitee.com/codePigPig/blogImages/raw/master/uPic/iterm3.png" alt="iterm3"></p><p>错误原因：</p><ul><li>以前我配置过脚本，所以生成过这个文件<code>/Users/codepigpig/.ssh/known_hosts</code>。</li></ul><p>解决办法：</p><ul><li>删除了以前的生成文件，然后重新连接后成功。</li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> iterm2 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> itemr2 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>RocketMQ特性</title>
       <link href="/2022/03/07/rocketmq-te-xing/"/>
       <url>/2022/03/07/rocketmq-te-xing/</url>

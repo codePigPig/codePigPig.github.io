@@ -6,7 +6,7 @@
   <link href="https://codepigpig.github.io/atom.xml" rel="self"/>
   
   <link href="https://codepigpig.github.io/"/>
-  <updated>2022-03-07T07:08:28.315Z</updated>
+  <updated>2022-03-08T03:37:54.885Z</updated>
   <id>https://codepigpig.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>iterm2配置免密连接阿里云服务器</title>
+    <link href="https://codepigpig.github.io/2022/03/08/iterm2-pei-zhi-mian-mi-lian-jie-a-li-yun-fu-wu-qi/"/>
+    <id>https://codepigpig.github.io/2022/03/08/iterm2-pei-zhi-mian-mi-lian-jie-a-li-yun-fu-wu-qi/</id>
+    <published>2022-03-08T03:33:07.000Z</published>
+    <updated>2022-03-08T03:37:54.885Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;1-配置&quot;&gt;&lt;a href=&quot;#1-配置&quot; class=&quot;headerlink&quot; title=&quot;1 配置&quot;&gt;&lt;/a&gt;1 配置&lt;/h2&gt;&lt;h3 id=&quot;1-1-配置脚本命令&quot;&gt;&lt;a href=&quot;#1-1-配置脚本命令&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="iterm2" scheme="https://codepigpig.github.io/categories/iterm2/"/>
+    
+    
+    <category term="itemr2" scheme="https://codepigpig.github.io/tags/itemr2/"/>
+    
+  </entry>
   
   <entry>
     <title>RocketMQ特性</title>
@@ -498,31 +523,6 @@
     <category term="变量" scheme="https://codepigpig.github.io/tags/%E5%8F%98%E9%87%8F/"/>
     
     <category term="常量" scheme="https://codepigpig.github.io/tags/%E5%B8%B8%E9%87%8F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>JavaSE(05)-Java数据类转换</title>
-    <link href="https://codepigpig.github.io/2021/12/23/javase-05-java-shu-ju-lei-zhuan-huan/"/>
-    <id>https://codepigpig.github.io/2021/12/23/javase-05-java-shu-ju-lei-zhuan-huan/</id>
-    <published>2021-12-23T11:43:53.000Z</published>
-    <updated>2021-12-28T08:07:33.204Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;Java数据类转换&quot;&gt;&lt;a href=&quot;#Java数据类转换&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="JavaSE" scheme="https://codepigpig.github.io/categories/JavaSE/"/>
-    
-    
-    <category term="数据类型" scheme="https://codepigpig.github.io/tags/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/"/>
     
   </entry>
   
